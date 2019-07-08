@@ -1,0 +1,502 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+
+
+        <script src="js/bootstrap.min.js" type="text/javascript"></script>
+        <link href="css/bootstrap.css" rel="stylesheet" type="text/css"/>
+        <script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
+        <script src="js/popper.min.js" type="text/javascript"></script>
+        <script src="js/bootstrap.min.js" type="text/javascript"></script>
+
+        <style>
+
+            body{
+
+
+
+                background-color:#c69500;
+            }
+            h1{
+                
+                background-color:#c82333;
+                font-size: 35px;
+                color:#000;
+            }
+
+            h3{
+
+
+                font-size: 20px;
+                color:#c82333;
+            }
+            
+        </style>
+
+
+     
+ 
+        <nav class="navbar navbar-expand-lg navbar-light bg-Success">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" >
+                <span class="navbar-toggler-icon"/> 
+            
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent sticky-top">
+                <ul class="navbar-nav mr-auto">
+<img src="img/logo.png" alt="..."/>
+                   <li class="nav-item active">
+                        <a class="nav-link" href="main.xhtml"><img src="img/Home-icon.png" alt="..."/>Home<span class="sr-only">(current)></span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="ab.xhtml"><img src="img/contacts-icon.png" alt="..."/>About</a>
+                        <li class="nav-item">
+                            <a class="nav-link" href="con.xhtml"></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="comshow.xhtml">Companies</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="companyform.xhtml">post a job</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Resumeformat.xhtml">post Resume</a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="img/log.gif" alt="..."/>
+                                Login
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="email.xhtml">Job seeker</a>
+                                <a class="dropdown-item" href="register.xhtml">Register</a>
+                                <a class="dropdown-item" href="adminlog.xhtml">Admin</a>
+                                <a class="dropdown-item" href="report.xhtml">Report</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"></a>
+                        </li>
+                    </li>
+
+                </ul>
+            
+            
+        
+            <h:form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder=" " aria-label="Search"/>
+                
+                
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </h:form>
+            </div>
+        </nav>
+
+            
+            
+            
+            
+     
+       
+        
+         
+
+
+     
+        
+       
+    
+    </h:head>
+
+    <h:body>
+           
+        <center>
+             <h:form>
+               <div class ="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card text-white bg-secondary mb-12" style="max-width: 40rem;">
+  
+  <div class="card-body">
+    <h5 class="card-title">Email login</h5>
+    <li class="btn-primary"><h:inputText value="#{newregister.password}"/></li>
+    
+
+  </div>
+ 
+<li class="btn-primary"><h:inputSecret value="#{newregister.password}"/></li>Password
+                  
+                            
+                            
+                            
+                            
+                            
+                            
+            
+  <div class="card-body">
+  
+      <h:commandButton value="Submit" class="btn-primary" action="up.xhtml"/>
+      <h:commandButton value="login" class="btn-primary" action="joblist.xhtml"/>   
+     
+
+      
+                              
+          
+    
+    <a href="comshow.xhtml" class="card_link btn-warning">Search new job</a>
+    
+            <h:commandButton value="Reset" action="main.xhtml"/>
+  </div>
+</div>
+                    </div>                       
+                        
+                        
+                        
+                        
+         <div class="col-md-8">                  
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+              <div class="card bg-light mb-9" style="max-width:30rem;">
+  <div class="card-header">Registration Form</div>
+  <div class="card-body">
+   	 
+		 
+     <h:form class="btn-secondary">
+                 <h:panelGrid columns="2">
+                     
+                     ID:<h:inputText  value="#{newregister.id}"></h:inputText> 
+                Name:<h:inputText  value="#{newregister.name}"></h:inputText> 
+                Email:<h:inputText  value="#{newregister.email}"></h:inputText> 
+                Password:<h:inputSecret  value="#{newregister.password}"/>
+                Current location:<h:selectOneMenu value="#{newregister.currentLocation}">
+                    <f:selectItem itemLabel="Dhaka" itemValue="Dhaka"/>
+                     <f:selectItem itemLabel="Khulna " itemValue="Khulna" />
+                     <f:selectItem itemLabel="Bogura" itemValue="Bogura"/>
+                 
+                </h:selectOneMenu>
+                   
+                
+                Gender:<h:selectOneRadio value="#{newregister.gender}">
+                    <f:selectItem itemLabel="female" itemValue="Female"/>
+                    <f:selectItem itemLabel="male" itemValue="Male"/>
+                </h:selectOneRadio>
+                Date of Birth:<h:inputText  value="#{newregister.dob}"></h:inputText> 
+               Mobile:<h:inputText  value="#{newregister.mobile}"></h:inputText> 
+              
+               
+               New user? <h:commandButton value="Register" class="btn-info" action="#{newregister.dosave()}"></h:commandButton><br></br>
+               <h:commandButton value="Sign up" class="btn-danger" action="signup.xhtml"></h:commandButton><br></br>
+               <h:commandButton value="Reset" class="btn-light" action="main.xhtml"></h:commandButton><br></br>
+             
+                     
+                 </h:panelGrid>
+     
+      
+              
+               
+        </h:form>
+      
+  </div>
+  
+  </div>
+</div> 
+       	 
+		             
+                        
+                    </div>                
+                        
+                        
+               </div>
+                 
+          
+    
+    
+    <div class="container">
+        
+            
+        <div class="row">
+            <div class="col-md-4">
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                         
+      <h:form>
+               
+            <table>
+                
+                <tr>
+                      
+                 <td>User name:<h:inputText value="#{newregister.name}"/></td><br></br>
+                
+                
+                </tr>
+                      
+                <tr> <td>Password:<h:inputSecret value="#{newregister.password}"/></td><br></br>
+                   
+                </tr>
+                 <td> <h:commandButton value="Login" action= "change.xhtml"></h:commandButton></td>
+                 <td> <h:commandButton value="Log out" action= "main.xhtml"></h:commandButton></td>
+                    
+             
+                
+                         </table>
+
+     
+           </h:form> 
+            
+                 </div>
+                 </div>
+        <div class="col-md-8">
+  
+                              
+                        
+     <div class="p-3 mb-2 bg-warning text-white"></div>
+        <center>
+                      
+            <div class="card bg-light mb-9" style="max-width:30rem;">
+  <div class="card-header">Resume</div>
+  <div class="card-body">
+   	 
+		 
+     <h:form class="btn-secondary">
+                 <h:panelGrid columns="2">
+                     
+                     ID:<h:inputText  value="#{resume.id}"></h:inputText> 
+                     First_name:<h:inputText  value="#{resume.firstName}"></h:inputText> 
+                     City:<h:inputText  value="#{resume.city}"></h:inputText> 
+               
+                 
+                Password:<h:inputSecret  value="#{resume.password}"/>
+                Email:<h:inputText  value="#{resume.email}"></h:inputText>
+               
+               Mobile:<h:inputText  value="#{resume.mobile}"></h:inputText> 
+               Zip:<h:inputText  value="#{resume.zip}"></h:inputText> 
+              
+               
+               
+               <h:commandButton value="Submit" class="btn-danger" action="#{resume.dosave()}"></h:commandButton><br></br>
+               <h:commandButton value="Remove" class="btn-light" action="#{resume.delete()}"></h:commandButton><br></br>
+               <h:commandButton value="Show" class="btn-light" action="resumeshow.xhtml"></h:commandButton><br></br>
+             
+                     
+                 </h:panelGrid>
+     
+      
+              
+               
+        </h:form>
+      
+    
+  </div>
+</div> 
+        </center>
+    
+       	 
+		 
+     
+                 
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+
+    
+    
+    <div class="container">
+        
+            
+        <div class="row">
+            
+            
+            
+            <div class="col-md-4">
+        
+                    Our Best Money Tips Delivered 
+                  <h:form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder=" " aria-label="Sign up"/>
+                <button class="btn btn-outline-warning  my-2 my-sm-0" type="submit">Sign up</button><div class="overflow-auto"></div>
+            </h:form>
+                    
+            
+            </div>
+   
+               
+        </div>
+    </div>
+        </div>
+    </div>
+             </h:form>
+        </center>
+        
+             
+       
+           
+                
+        
+            <div class="col-md-4">
+                Finding a Job<br></br>
+                Career Paths<br></br>
+                Succeeding at Work
+            </div>
+            <div class="col-md-2">
+                About US<br></br>
+                Advertise<br></br>
+                Terms of Use
+              
+            </div>
+            <div class="col-md-2">
+                
+            </div>
+        
+    
+    
+    <center>Call Center:16474 and +88096780166474(overseas)Copyright @2019 My Job Portal.All rights reserved.
+    </center>
+    <div class="p-3 mb-2 bg-info text-white"></div>   
+    
+    
+  
+    
+    <marquee  behavior="scroll" direction="up"><center><h1 style="color:whitesmoke">Thank You For Visiting the side</h1></center>
+    
+    </marquee>
+    
+     <div class="p-3 mb-2 bg-dark text-white"></div>   
+          
+               
+           
+        
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+   
+    
+  
+ 
+    
+
+        
+ 
+
+    </h:body>
+    
+    
+
+
+
+    
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     
+        
+        
+
+           
+
+
+

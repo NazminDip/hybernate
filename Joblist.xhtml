@@ -1,0 +1,170 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+     >
+    <h:head>
+        <title>Facelet Title</title>
+        <script src="js/bootstrap.min.js" type="text/javascript"></script>
+        <link href="css/bootstrap.css" rel="stylesheet" type="text/css"/>
+        <script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
+           <script src="js/popper.min.js" type="text/javascript"></script>
+         <script src="js/bootstrap.min.js" type="text/javascript"></script>
+        
+     
+        
+        
+        
+      
+<nav class="navbar navbar-expand-lg navbar-light bg-primary">
+  <a class="navbar-brand" href="main.xhtml">Home</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent sticky-top">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="about.xhtml">About<span class="sr-only">(current)></span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="company.xhtml">Companies</a>
+      </li>
+        <li class="nav-item">
+        <a class="nav-link" href="joblist.xhtml">post a job</a>
+      </li>
+         <li class="nav-item">
+        <a class="nav-link" href="services.xhtml">Jobs</a>
+      </li>
+        
+       <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Login
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="index.xhtml">Register</a>
+          <a class="dropdown-item" href="adminlog.xhtml">Admin login</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"></a>
+      </li>
+    </ul>
+    
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+  </div>
+</nav>
+        
+    </h:head>
+    <div class="carousel-item active">
+      <img src="img/b.jpg" class="d-block w-100" alt="..."/>
+    </div>
+    
+    
+    
+    
+    <h:body>
+        <div class="p-3 mb-2 bg-warning text-white"></div>
+        <center>
+                      
+            <div class="card bg-secondary mb-9" style="max-width:30rem;">
+                <div class="card-header"><b>Post A Job</b></div>
+  <div class="card-body">
+   	 
+		 
+     <h:form class="btn-light">
+                 <h:panelGrid columns="2">
+                    JobId:<h:inputText  value="#{joblist.jobid}"></h:inputText> 
+                 
+              
+                
+                     Location:<h:selectOneMenu value="#{joblist.location}">
+                    <f:selectItem itemLabel="Uttara" itemValue="Uttara"/>
+                     <f:selectItem itemLabel="Kawranbazar " itemValue="Kawranbazar" />
+                     <f:selectItem itemLabel="Motijheel" itemValue="Motijheel"/>
+                     <f:selectItem itemLabel="Savar" itemValue="Savar"/>
+                 
+                </h:selectOneMenu>
+                   
+                     
+                   Post:<h:inputText  value="#{joblist.post}"></h:inputText> 
+                     
+                     
+                     Industries:<h:selectOneMenu value="#{joblist.industries}">
+                    <f:selectItem itemLabel="Service" itemValue="Service"/>
+                     <f:selectItem itemLabel="Profitable" itemValue="Profitable" />
+                     <f:selectItem itemLabel="Non_profitable" itemValue="Non-Profitable"/>
+                     <f:selectItem itemLabel="Charity" itemValue="Charity"/>
+                     <f:selectItem itemLabel="Native" itemValue="Native"/>
+                     <f:selectItem itemLabel="Foreign" itemValue="Foreign"/>
+                 
+                </h:selectOneMenu>
+                     
+                     Experience:<h:selectOneMenu value="#{joblist.experience}">
+                    <f:selectItem itemLabel="6 Month" itemValue="6 Month"/>
+                    <f:selectItem itemLabel="1yrs" itemValue="1Yrs"/>
+                    <f:selectItem itemLabel="2yrs" itemValue="2Yrs"/>
+                    <f:selectItem itemLabel="5yrs" itemValue="5Yrs"/>
+                     <f:selectItem itemLabel="8yrs" itemValue="8yrs" />
+                     <f:selectItem itemLabel="10yrs" itemValue="10yrs" />
+                     
+                 
+                </h:selectOneMenu>
+                     
+                     
+                     
+                
+               
+              
+                     Salary:<h:selectOneMenu value="#{joblist.salary}">
+                    <f:selectItem itemLabel="5000 tk." itemValue="5000 tk."/>
+                    <f:selectItem itemLabel="10000 tk." itemValue="10000 tk."/>
+                    <f:selectItem itemLabel="15000 tk." itemValue="15000 tk."/>
+                    <f:selectItem itemLabel="20000 tk." itemValue="20000 tk."/>
+                    <f:selectItem itemLabel="30000 tk." itemValue="30000 tk."/>
+                    <f:selectItem itemLabel="50000 tk." itemValue="50000 tk."/>
+                    <f:selectItem itemLabel="100000 tk." itemValue="100000 tk."/>
+                    
+                 
+                </h:selectOneMenu>
+               
+                     <h:commandButton value="JobPost" class="btn-info" action="#{joblist.doSav()}"></h:commandButton><br></br>
+                     <h:commandButton value="Change JobPost" class="btn-info" action="#{joblist.doUp()}"></h:commandButton><br></br>
+                     <h:commandButton value="Remove" class="btn-info" action="#{joblist.doDel()}"></h:commandButton><br></br>
+                    <h:commandButton value="Show" class="btn-info" action="jobshow.xhtml"></h:commandButton><br></br>
+                    <h:commandButton value="Home" class="btn-info" action="main.xhtml"></h:commandButton><br></br>
+               
+                     
+                 </h:panelGrid>
+     
+      
+              
+               
+        </h:form>
+      
+    
+  </div>
+</div> 
+        </center>
+    
+       	 
+		 
+	
+        
+ 
+        
+            
+            
+            
+            
+            
+            
+             
+            
+            
+    </h:body>
+</html>
+

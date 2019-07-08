@@ -1,0 +1,201 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+        
+        <link rel="stylesheet" href="css/bootstrap.css"/>
+        <link rel="stylesheet" href="css/font-awesome.min.css"/>
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <script src="js/bootbox.min.js"></script>
+    </h:head>
+    <h:body>
+         <div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4"><h6 ></h6>
+                    </div>
+                    <div class="col-md-4">
+                        <img src="picture/logos.jpg" alt="" width="350px" height="80px"/>
+                    </div>
+
+                    <div class="col-md-4">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a class="navbar-brand" href="index.xhtml">HOME</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+
+                    &nbsp;
+                    <a class="navbar-brand" href="employee.xhtml"> EMPLOYEE DETAILS</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    &nbsp;
+                    <a class="navbar-brand" href="customerdetails.xhtml"> CUSTOMER DETAILS</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    &nbsp;
+                    <a class="navbar-brand" href="applyloanshow.xhtml"> ACCOUNT INFO</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    &nbsp;
+                    <a class="navbar-brand" href="management.xhtml"> MANAGEMENT SYSTEM</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    &nbsp;
+                    <a class="navbar-brand" href="index.xhtml"> LOG OUT</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                </ul>
+            </div>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"/>
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </nav>
+         
+         <div style="background-color: threedlightshadow">
+        <br></br>
+        <center>
+            <h3 style="color: blue">Please Fill Up This Form For Employee Information</h3>
+         <br></br>
+         
+         <h:form style="font-size: 20px">
+             <p:panelGrid columns="2" style="background-color: threedlightshadow">
+                 ID:<p:inputText value="#{employee.id}"></p:inputText>
+                 NAME:<p:inputText value="#{employee.name}"></p:inputText>
+                 FATHER'S NAME:<p:inputText value="#{employee.fname}"></p:inputText>
+                 GENDER:<p:selectOneRadio value="#{employee.gender}">
+                    <f:selectItem itemLabel="MALE" itemValue="MALE"></f:selectItem>
+                    <f:selectItem itemLabel="FEMALE" itemValue="FEMALE"></f:selectItem>
+                </p:selectOneRadio>
+                 POST:<h:selectOneMenu value="#{employee.post}" style="width:240px">
+                                
+                                <f:selectItem itemValue="M.D" itemLabel="M.D"></f:selectItem>
+                                <f:selectItem itemValue="CEO" itemLabel="CEO"></f:selectItem>
+                                <f:selectItem itemValue="SR.OFFICER" itemLabel="SR.OFFICER"></f:selectItem>
+                                <f:selectItem itemValue="OFFICER" itemLabel="OFFICER"></f:selectItem>
+                                <f:selectItem itemValue="JR.OFFICER" itemLabel="JR.OFFICER"></f:selectItem>
+                            </h:selectOneMenu>
+                 EMAIL:<p:inputText value="#{employee.email}"></p:inputText>
+                 JOIN DATE:<p:inputText value="#{employee.joindate}"></p:inputText>
+                 SALARY:<p:inputText value="#{employee.salary}"></p:inputText>
+                 CONTACT:<p:inputText value="#{employee.contact}"></p:inputText>
+                 ADDRESS:<p:inputTextarea value="#{employee.address}"></p:inputTextarea>
+            </p:panelGrid> <br></br>
+            <p:commandButton value="SAVE" class="btn-success" action="#{employee.doSave()}" ></p:commandButton>&nbsp;
+            <p:commandButton value="UPDATE" class="btn-success" action="#{employee.doUpdate()}"></p:commandButton>&nbsp;
+            <p:commandButton value="DELETE" class="btn-success" action="#{employee.doUpdate()}"></p:commandButton>&nbsp;
+            <p:commandButton value="SHOW" class="btn-success" action="employeeshow.xhtml"></p:commandButton>
+        </h:form>
+        </center><br></br>
+        <div style="background-color: #e9ecef; border-top: #0b2e13 dashed thin">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-md-5"> <br></br>
+                        <h3 style="font: bold" >ABOUT DHAKA BANK</h3>
+                        <h6> Dhaka Bank has truly cherished and brought into focus the heritage and history of Dhaka and Bangladesh from Mughal outpost to modern metropolis. Most of its presentation, publications, brand initiatives, delivery channels, calendars and financial manifestations bear Bank’s commitment to this attachment.</h6>
+                    </div>
+                    <div class="col-md-3">
+                        <br></br>
+                        <img src="picture/customar-compliment.png" alt=""/><br></br>
+                        <img src="picture/customer-services.png" alt=""/>
+                    </div>
+                    <div class="col-md-3">
+                        <br></br>
+                        <img src="picture/find-atm.png" alt=""/><br></br>
+                        <img src="picture/dudok-icon.png" alt=""/>
+                    </div>
+
+                </div>
+            </div>	
+            <br></br>
+       
+            <div class="container" style="border-top: #0b2e13 dashed thin"> <br></br>
+                <div class="row">
+                    <div class="col-sm-2">
+                        <ul>   <h6>NEW PRODUCTS</h6>
+                            <li>  <a href="#">Student's Ledger</a></li>
+                            <li> <a href="#">Credit Card</a></li>
+                            <li> <a href="#">Home Loan</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-2">
+                        <ul>  <h6>SERVICES</h6>
+
+                            <li>   <a href="#">Islamic Banking</a></li>
+                            <li>  <a href="#">Off-Shore Banking</a></li>
+                            <li> <a href="#">Locker Services</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-2">
+                        <ul> <h6>CURRENT EVENTS</h6>
+
+                            <li> <a href="#">A Singing Ceremony</a></li>
+                            <li> <a href="#">Cheerful Colleagues</a></li>
+                            <li> <a href="#">Celebrate Occasions</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-2">
+                        <ul>  <h6>INFORMATION</h6>
+
+                            <li> <a href="#">Branches and ATM's</a></li>
+                            <li>  <a href="#">SME Service Centers</a></li>
+                            <li>   <a href="#">Complaint Cell</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-2">
+                        <ul> <h6>ABOUT</h6>
+
+                            <li><a href="#">Sponsor Shareholders</a></li>
+                            <li><a href="#">Board Of Directors</a></li>
+                            <li> <a href="#">Management Committee</a></li>
+                        </ul>
+                    </div>
+ </div>
+                </div>
+            </div>	
+
+
+
+
+
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <img src="picture/footer-logo.png" alt=""/>
+                    </div>
+                    <div class="col-md-8"><h6 >Call Center: 16474  and   +8809678016474  (Overseas)  Copyright © 2019 Dhaka Bank Limited. All rights reserved.</h6>
+                    </div>
+
+                </div>
+            </div>
+
+            <br></br>
+        </div>
+
+    </h:body>
+</html>
+

@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
+      xmlns:cc="http://xmlns.jcp.org/jsf/composite">
+    <h:head>
+        <title>Facelet Title</title>
+        
+     <script src="js/bootstrap.min.js" type="text/javascript"></script>
+        <link href="css/bootstrap.css" rel="stylesheet" type="text/css"/>
+        <script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
+        <script src="js/popper.min.js" type="text/javascript"></script>
+        <script src="js/bootstrap.min.js" type="text/javascript"></script>
+        <style>
+            body{
+                
+                 margin-top: 50px;
+                margin-left: 50px;
+                background-color:#9fcdff;
+                font-size: 30px;
+                color:#000;
+            }
+        </style>   
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    </h:head>
+    <h:body>
+        <h:form>
+            
+ 
+        <c:if test="${  empty param.errM  or  empty param.Emailloogin}">
+             <h:outputText value="Email or password is invalid"/>
+             <h:commandLink value="New register ?"  action="register.xhtml"/>
+             <h:commandButton value="Back" class="btn-info" action="email.xhtml"/>
+             <h:commandButton value="Get Registration" class="btn-info" action="register.xhtml"/>
+          
+         
+            
+        </c:if>
+            
+        </h:form>
+    </h:body>
+  
+   
+</html>
+
