@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Mar 22, 2019 1:58:41 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.exam.Joblist" table="joblist" catalog="dip" optimistic-lock="version">
+        <id name="jobid" type="int">
+            <column name="jobid" />
+            <generator class="assigned" />
+        </id>
+        <property name="location" type="string">
+            <column name="location" length="30" />
+        </property>
+        <property name="post" type="string">
+            <column name="post" length="30" />
+        </property>
+        <property name="industries" type="string">
+            <column name="Industries" length="30" />
+        </property>
+        <property name="experience" type="string">
+            <column name="experience" length="30" />
+        </property>
+        <property name="lastDate" type="java.lang.Integer">
+            <column name="last_date" />
+        </property>
+        <property name="salary" type="string">
+            <column name="salary" length="30" />
+        </property>
+    </class>
+</hibernate-mapping>

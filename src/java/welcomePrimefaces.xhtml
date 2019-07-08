@@ -1,0 +1,172 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+
+    <f:view contentType="text/html">
+        <h:head>
+        
+            <style>
+                body{
+                    
+                    
+                    background-color:#545b62;
+                    
+                    
+                }
+            </style>
+            <f:facet name="first">
+                <meta content='text/html; charset=UTF-8' http-equiv="Content-Type"/>
+                <title>PrimeFaces</title>
+            </f:facet>
+
+        </h:head>
+
+         <f:view contentType="text/html">
+            <f:facet name="first">
+                <meta content='text/html; charset=UTF-8' http-equiv="Content-Type"/>
+                <title></title>
+            </f:facet>
+         </f:view>
+        
+</f:view>
+       
+        <h:body>
+
+            <p:layout fullPage="true">
+
+                <p:layoutUnit position="north" size="100" resizable="true" closable="true" collapsible="true">
+                    <center><marquee behavior="alternative"> <h1 style= "color:blue"            class="display-4"><b>Welcome TO Online Job Portal</b></h1>
+                </marquee><ui:param name="username" value="#{loginMB.user}" /></center> 
+                </p:layoutUnit>
+
+                <p:layoutUnit position="south" size="100" closable="true" collapsible="true">
+                    <h3 style="margin-top:0"><div class="col-md-8"><h6 >Call Center: 16475  and   +8809678016474  (Overseas)  Copyright © 2019 My job portal. All rights reserved.</h6>
+                </div></h3>
+                    <p:graphicImage      library= "resource" name= "image-8.jpg" />
+                </p:layoutUnit>
+
+                <p:layoutUnit        style="color:orange"  position="west" size="175" header="Hide" collapsible="true">
+                    <p:menu>
+                        <p:submenu   style="color:orange"       label="My Profile" >
+                            <p:menuitem     style="color:orange"    value="About" url="ab.xhtml"/>
+                            <p:menuitem     style="color:orange"              value="Edit Profile" url="main.xhtml" />
+                            <p:menuitem      style="color:orange"                        value="Saved Profiles" url="#" />
+                            <p:menuitem     style="color:orange"                value="Login" url= "email.xhtml" />
+                            <p:menuitem      style="color:orange"                  value="Form" url= "register.xhtml" />
+                            <p:menuitem      style="color:orange"                  value="Report" url= "report.xhtml" />
+                        </p:submenu>
+
+                    </p:menu>
+                </p:layoutUnit>
+
+                <p:layoutUnit position="center">
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="img/admin.jpg" class="d-block w-100" alt="..."/>
+                </div>
+                 <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="img/cover1.jpg" class="d-block w-100" alt="..."/>
+                </div>
+                
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+        </div>
+                    
+                    
+        </div>
+             
+                  
+                    
+                    
+                    
+                </p:layoutUnit>
+            </p:layout>
+        </h:body>
+  <center>
+        <h2>Log In/ Sign Up Form</h2>
+            <div class ="container">
+                <div class="row">
+                    <div class="col-md-4"></div>
+                    <div class="col-md-4">
+                         <h:form>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Email address</label>
+                                
+                                <h:inputText class="form-control"  value="#{login.email}"/>
+                                    <small id="emailHelp" class="form-text text-muted"></small>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Password</label>
+                                <h:inputSecret class="form-control" value="#{login.password}"/>
+                            </div>
+                            <div class="form-group form-check">
+                                <input type="checkbox" class="form-check-input" id="exampleCheck1"/>
+                                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                            </div>
+                           <!--<h:commandButton value="Submit" class="btn btn-primary" action="up.xhtml"/>-->
+                                <h:commandButton value="login" class="btn btn-primary" action="#{login.doShow()}"/>   
+                                <a href="comshow.xhtml" class="card_link btn btn-warning">Search new job</a>
+
+                                <h:commandButton class="btn btn-primary" value="Reset" action="main.xhtml"/>
+                         </h:form>
+                    </div>
+                        <div class="col-md-4"></div>
+                    </div>
+                </div>
+        
+        
+        
+        
+        
+                        
+<img src="img/try.png" width="100px"  heighr="100px" alt="..."/>
+ <marquee  behavior="scroll" direction="up"><center><h1 style="color:whitesmoke">Thank You For Visiting the side</h1></center>
+
+        </marquee>
+
+    </center>
+ 
+
+</html>
+  
+
+
+  
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                   
+                    
+     

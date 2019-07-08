@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Mar 22, 2019 1:58:41 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.exam.Resume" table="resume" catalog="dip" optimistic-lock="version">
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <property name="firstName" type="string">
+            <column name="First_name" length="30" />
+        </property>
+        <property name="city" type="string">
+            <column name="city" length="30" />
+        </property>
+        <property name="password" type="string">
+            <column name="password" length="30" />
+        </property>
+        <property name="email" type="string">
+            <column name="email" length="30" />
+        </property>
+        <property name="mobile" type="java.lang.Integer">
+            <column name="mobile" />
+        </property>
+        <property name="zip" type="string">
+            <column name="zip" length="30" />
+        </property>
+    </class>
+</hibernate-mapping>
